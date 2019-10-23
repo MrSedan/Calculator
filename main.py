@@ -51,6 +51,9 @@ def ckv():
     except:
         pass
 
+def bp():
+    ui.lineEdit.backspace()
+
 ui.pushButton_9.clicked.connect(ck1)
 ui.pushButton_6.clicked.connect(ck2)
 ui.pushButton_10.clicked.connect(ck3)
@@ -79,6 +82,7 @@ keyboard.add_hotkey('-',ckm)
 keyboard.add_hotkey('+',ckp)
 keyboard.add_hotkey('=',ckv)
 keyboard.add_hotkey('Enter',ckv)
+keyboard.add_hotkey('Backspace', bp)
 
 
 sys.exit(app.exec_())
