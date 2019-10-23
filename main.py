@@ -1,5 +1,6 @@
 import sys
 from calcui import *
+import keyboard
 app = QtWidgets.QApplication(sys.argv)
 Form = QtWidgets.QWidget()
 ui = Ui_Form()
@@ -63,4 +64,21 @@ ui.pushButton_13.clicked.connect(ck0)
 ui.pushButton_4.clicked.connect(ckm)
 ui.pushButton_11.clicked.connect(ckp)
 ui.pushButton_12.clicked.connect(ckv)
+
+keyboard.add_hotkey('1',ck1)
+keyboard.add_hotkey('2',ck2)
+keyboard.add_hotkey('3',ck3)
+keyboard.add_hotkey('4',ck4)
+keyboard.add_hotkey('5',ck5)
+keyboard.add_hotkey('6',ck6)
+keyboard.add_hotkey('7',ck7)
+keyboard.add_hotkey('8',ck8)
+keyboard.add_hotkey('9',ck9)
+keyboard.add_hotkey('0',ck0)
+keyboard.add_hotkey('-',ckm)
+keyboard.add_hotkey('+',ckp)
+keyboard.add_hotkey('=',ckv)
+keyboard.add_hotkey('Enter',ckv)
+
+
 sys.exit(app.exec_())
