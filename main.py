@@ -51,11 +51,48 @@ def ckp():
     except:
         pass
 
+def ckd():
+    try:
+        text = ui.lineEdit.text()
+        if text[len(text) - 1] not in ['-', '+','.','/','*']: ui.lineEdit.setText(ui.lineEdit.text() + '.')
+    except:
+        pass
+
+def ckpod():
+    try:
+        text = ui.lineEdit.text()
+        if text[len(text) - 1] not in ['-', '+','.','/','*']: ui.lineEdit.setText(ui.lineEdit.text() + '/')
+    except:
+        pass
+
+def cku():
+    try:
+        text = ui.lineEdit.text()
+        if text[len(text) - 1] not in ['-', '+','.','/','*']: ui.lineEdit.setText(ui.lineEdit.text() + '*')
+    except:
+        pass
+
+def ckc():
+    try:
+        i = len(ui.lineEdit.text())-1
+        while ui.lineEdit.text()[i] not in ['-', '+','.','/','*']:
+            ui.lineEdit.backspace()
+            i-=1
+    except:
+        pass
+
+def ckce():
+    try:
+        ui.lineEdit.setText('')
+    except:
+        pass
+
 def ckv():
     try:
         ui.lineEdit.setText(str(eval(ui.lineEdit.text())))
     except:
         pass
+
 
 def bp():
     ui.lineEdit.backspace()
@@ -73,6 +110,13 @@ ui.pushButton_13.clicked.connect(ck0)
 ui.pushButton_4.clicked.connect(ckm)
 ui.pushButton_11.clicked.connect(ckp)
 ui.pushButton_12.clicked.connect(ckv)
+ui.pushButton_14.clicked.connect(ckd)
+ui.pushButton_15.clicked.connect(cku)
+ui.pushButton_16.clicked.connect(ckpod)
+ui.pushButton_17.clicked.connect(bp)
+ui.pushButton_18.clicked.connect(ckc)
+ui.pushButton_19.clicked.connect(ckce)
+
 
 keyboard.add_hotkey('1',ck1)
 keyboard.add_hotkey('2',ck2)
@@ -87,6 +131,8 @@ keyboard.add_hotkey('0',ck0)
 keyboard.add_hotkey('-',ckm)
 keyboard.add_hotkey('+',ckp)
 keyboard.add_hotkey('=',ckv)
+keyboard.add_hotkey('.',ckd)
+keyboard.add_hotkey('*',cku)
 keyboard.add_hotkey('Enter',ckv)
 keyboard.add_hotkey('Backspace', bp)
 
