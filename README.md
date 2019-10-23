@@ -1,4 +1,4 @@
-Now you can not install modules for **Python**, but just run the **`Calculator.exe`**
+Now you can not install modules for **Python**, but just run the **`Calc.exe`**
 If you want to run a script you must install **PyQt5** modules to run that:
 ```
 pip install -r requirements.txt
