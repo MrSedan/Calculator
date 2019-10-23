@@ -59,7 +59,7 @@ def ckv():
 
 def bp():
     ui.lineEdit.backspace()
-
+ui.lineEdit.setReadOnly(True)
 ui.pushButton_9.clicked.connect(ck1)
 ui.pushButton_6.clicked.connect(ck2)
 ui.pushButton_10.clicked.connect(ck3)

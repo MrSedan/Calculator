@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'untitled.ui'
-#
-# Created by: PyQt5 UI code generator 5.13.1
-#
 # WARNING! All changes made in this file will be lost!
 
 
@@ -12,7 +8,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_Form(object):
     def setupUi(self, Form):
-        Form.setObjectName("Form")
+        Form.setObjectName("Calculator")
         Form.resize(350, 393)
         Form.setStyleSheet("QPushButton {\n"
 "    background-color: white;\n"
