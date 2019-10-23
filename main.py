@@ -38,12 +38,18 @@ def ck0():
     ui.lineEdit.setText(ui.lineEdit.text()+'0')
 
 def ckm():
-    text = ui.lineEdit.text()
-    if text[len(text)-1] not in ['-','+']: ui.lineEdit.setText(ui.lineEdit.text()+'-')
+    try:
+        text = ui.lineEdit.text()
+        if text[len(text)-1] not in ['-','+']: ui.lineEdit.setText(ui.lineEdit.text()+'-')
+    except:
+        pass
 
 def ckp():
-    text = ui.lineEdit.text()
-    if text[len(text) - 1] not in ['-', '+']: ui.lineEdit.setText(ui.lineEdit.text() + '+')
+    try:
+        text = ui.lineEdit.text()
+        if text[len(text) - 1] not in ['-', '+']: ui.lineEdit.setText(ui.lineEdit.text() + '+')
+    except:
+        pass
 
 def ckv():
     try:
